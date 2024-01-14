@@ -1,0 +1,8 @@
+<div class="flex flex-col space-y-5">
+  <div *ngFor="let education of dataUser?.education">
+    <h3 class="font-bold pb-2 text-3xl">{{ education?.major }}</h3>
+    <hr />
+    <p>{{ education?.schoolName }}</p>
+    <small>{{ education?.startDate }} - {{ education?.endDate }}</small>
+  </div>
+</div>

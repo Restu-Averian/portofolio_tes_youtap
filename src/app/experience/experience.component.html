@@ -1,0 +1,22 @@
+<div>
+  <div
+    class="flex flex-row space-y-5 justify-between align-middle"
+    *ngFor="let exp of dataUser?.experience"
+  >
+    <div class="flex flex-col">
+      <h3 class="font-bold pb-2">{{ exp?.role }}</h3>
+      <ul class="list-disc">
+        <li *ngFor="let listJob of exp?.listJobDetail">
+          {{ listJob?.name }}
+          <p *ngIf="listJob?.description" class="ml-10">
+            {{ listJob?.description }}
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="flex flex-col">
+      <p>{{ exp?.startDate }} - {{ exp?.endDate }}</p>
+    </div>
+  </div>
+</div>

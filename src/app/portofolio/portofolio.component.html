@@ -1,0 +1,19 @@
+<div class="flex flex-wrap space-x-5">
+  <div
+    class="border w-60 p-5 flex flex-col space-y-3 rounded"
+    *ngFor="let portofolio of dataUser?.portofolio"
+  >
+    <img [src]="portofolio?.imageUrl?.[0]" />
+    <h3 class="font-bold border-b-2 pb-2">{{ portofolio?.name }}</h3>
+    <p>{{ portofolio?.description }}</p>
+    <small *ngIf="portofolio?.startDate || portofolio?.endDate"
+      >{{ portofolio?.startDate }} - {{ portofolio?.endDate }}</small
+    >
+    <button
+      (click)="openProject(portofolio?.link || '')"
+      class="bg-[#55dbff] p-2 rounded-lg font-semibold hover:bg-[#55dbffcc] transition-all 300ms"
+    >
+      Open
+    </button>
+  </div>
+</div>

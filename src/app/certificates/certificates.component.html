@@ -1,0 +1,10 @@
+<div class="flex flex-wrap space-x-5">
+  <div
+    class="border w-60 p-5 flex flex-col space-y-3"
+    *ngFor="let certificate of dataUser?.certificate"
+  >
+    <h3 class="font-bold border-b-2 pb-2">{{ certificate?.name }}</h3>
+    <p>{{ certificate?.description }}</p>
+    <small>{{ certificate?.date }}</small>
+  </div>
+</div>

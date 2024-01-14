@@ -1,0 +1,9 @@
+<div class="flex flex-wrap space-x-5">
+  <div
+    class="border w-60 p-5 flex flex-col space-y-3"
+    *ngFor="let skill of dataUser?.skill"
+  >
+    <h3 class="font-bold border-b-2 pb-2">{{ skill?.name }}</h3>
+    <p>{{ skill?.description }}</p>
+  </div>
+</div>
